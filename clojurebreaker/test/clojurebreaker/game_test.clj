@@ -17,7 +17,7 @@
 
 (defn scoring-is-bounded-by-number-of-pegs
   [secret guess score]
-  (< 0 (matches score) (count secret)))
+  (<= 0 (matches score) (count secret)))
 (defn reordering-the-guess-does-not-change-matches
   [secret guess score]
   (= #{(matches score)}
